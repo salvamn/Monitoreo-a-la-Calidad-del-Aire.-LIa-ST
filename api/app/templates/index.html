@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/darcula.min.css"> 
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/documentoPrincipal.js') }}"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="{{ url_for('static', filename='js/copiarTexto.js') }}"></script>
+</head>
+<body>
+    
+
+    <div id="documento-principal">
+
+        <div id="barra-navegacion">
+
+            <div class="logo">
+                <img src="{{ url_for('static', filename='img/logos.png') }}" alt="">
+                <h4>Api de Monitoreo</h4>
+            </div>
+
+            <div class="links">
+                {% for ruta in rutas %}
+                    <a href="{{ rutas[ruta] }}">{{ ruta }}</a>
+                {% endfor %}
+            </div>
+        </div>
+
+
+
+
+
+        <div id="contenedor-principal">
+
+
+            <div id="contenedor">
+
+
+                <div class="titulo">
+                    <br><img style="width: 15%;" src="{{ url_for('static', filename='img/logos.png') }}" alt="logo"><br>
+                    <h2>La API para el proyecto Estación de monitoreo calidad del aire</h2>
+                </div>
+
+                
+                
+                <div class="descripcion">
+
+                    <p>
+                        Bienvenid@ a nuestra API del proyecto monitoreo de calidad del aire, aqui encontraras los datos de los sensores que estamos utilizando en el proyecto, estos datos los devolveremos en formato JSON.
+                    </p>
+
+                </div>
+
+                <!-- <hr> -->
+
+                <div class="ejemplo">
+                    <h3>Ejemplo 1</h3><br>
+                    
+                    <p>
+                        Para obtener el ultimo valor obtenido por los sensores.
+                        <a href="/listar_datos_sensores" target="_blank">Pruebalo</a>
+                    </p>
+
+                    <code class="link-ejemplo">
+                        <span id="ejemplo1">http://127.0.0.1:5000/listar_datos_sensores</span>
+                        <button class="tooltip" onclick="copiarTexto('ejemplo1')">
+                            <span class="tooltiptext" id="myTooltip">Copiar</span>
+                            <img src="{{ url_for('static', filename='img/copiar.ico') }}" alt="">
+                        </button>
+                    </code>
+                    <br>
+                    <h4>Resultado</h4>
+                    <pre>
+                        <code class="JSON">
+[
+    {
+        "Humedad": 54,
+        "PM": 23,
+        "Rayos UV": 7,
+        "Temperatura": 23.6
+    }
+]
+                        </code>
+                    </pre>
+
+
+                </div>
+
+                <hr>
+
+                <div class="ejemplo">
+                    <h3>Ejemplo 2</h3><br>
+                    <p>
+                        Para obtener el dato de un sensor en particular.
+                        <a href="#">Pruebalo</a>
+                    </p><br>
+
+                    <ul>
+                        <li>dht22</li>
+                        <li>nova</li>
+                        <li>uv</li>
+                    </ul>
+
+                    <code class="link-ejemplo">
+                        <span id="ejemplo2">http://127.0.0.1:5000/listar_dato/</span><mark>nombre_sensor</mark>
+                        <button class="tooltip" onclick="copiarTexto('ejemplo2')">
+                            <span class="tooltiptext" id="myTooltip">Copiar</span>
+                            <img src="{{ url_for('static', filename='img/copiar.ico') }}" alt="">
+                        </button>
+                    </code>
+
+                    <br>
+
+                    <h4>Resultado</h4>
+
+                    <pre>
+                        <code class="JSON">
+[
+    {
+        "Humedad": 45,
+        "Temperatura": 23.4
+    }
+]
+                        </code>
+                    </pre>
+                </div>
+
+
+                <hr>
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ titulo }}</title>
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/error.css') }}">
+    <script src="{{ url_for('static', filename='js/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/documentoPrincipal.js') }}"></script>
+</head>
+<body>
+    
+
+
+    <div id="documento-principal">
+        <div class="imagen">
+            <img src="{{ url_for('static', filename='img/404.png') }}" alt="Error 404">
+        </div>
+
+        <div class="error-descripcion">
+            <p>La pagina que esta buscando no existe o no se encuentra disponible.</p>
+        </div>
+
+        <div class="link">
+            <a href="/">Inicio</a>
+        </div>
+    </div>
+
+
+</body>
+</html>

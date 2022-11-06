@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel   = "stylesheet" href="css/estilos.css"/>
+    <script src="dht22.js"></script>
+    <script src="sds011.js"></script>
+    <script src="uv.js"></script>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+
+<body>
+    <header class="header">
+        <nav class="nav">
+            
+            <a href="#" class="logolia"><img height="86"width="110"src="img/lia.png"alt="programador"/>
+                
+               
+                
+            <ul class="nav-menu">
+                <li class="nav-menu-item">
+                    <a href="Inicio.html" class="nav-menu-link nav-link" class= "selected">Inicio</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="sensores.html"class="nav-menu-link nav-link">Sensores</a>
+                </li>
+                <!-- <li class="nav-menu-item">
+                    <a href="sobrenosotros.html" class="nav-menu-link nav-link">Sobre nosotros</a>
+                </li>
+                <li class="nav-menu-item">
+                    <a href="contacto.html" class="nav-menu-link nav-link">Contacto</a>
+                </li> -->
+            </ul>
+         </nav>
+    
+    </header>
+
+    <main>
+
+
+
+
+
+        <div id="container">
+
+            <div id="ventanaizquierda">
+                DHT22
+                <div id="temperatura">
+                    <img class="ancho-img" src="img/temperatura.png"/>
+                    <p>Temperatura: </p>
+                    <p id="peticiontemperatura"></p>
+                
+                </div>
+
+                <div id="humedad">
+                    
+                    <img class="ancho-img" src="img/humedad.png"/>
+                    <p>Humedad: </p>
+                    <p id="peticionhumedad"></p>
+                    
+                    
+            </div>
+             </div>   
+
+            
+
+
+
+          
+            <div id="ventanacentro">
+                SDS011
+                <div id="pmdoscomacinco"> 
+                    
+                    <img class="ancho-img" src="img/particulas.png"/>
+                    <p>PM2.5: </p>
+                    <p id="peticionpmdospuntocinco"></p>
+
+
+
+
+
+                </div>
+                <div id="pmdiez">
+                    <img class="ancho-img" src="img/particulas.png"/>
+                    <p>PM10: </p>
+                    <p id="peticionpmdiez"></p>
+
+                    
+                </div>
+            </div>
+
+            <!-- <div>
+
+            </div> -->
+
+            <div id="ventanaderecha">
+              ML8511
+              <div id ="uvluz">
+                <img class="ancho-img" src="img/indiceuv.png"/>
+                <p>Radiación de luz: </p>
+                <p id="peticionradiacionluz"></p>
+              </div>
+            </div>
+
+        </div>
+    
+            <div id="container2"> 
+            <div id="ventanarectangulo">
+                
+                <div id="contenedor-tabla-indice-uv">
+
+                    <h3>Índice de Radiación</h3><br>
+
+                    <div class="indice-cero">
+                        <div class="color-indice-0"></div>
+                        <div>0</div>
+                        <div>&lt;50</div>
+                    </div>
+                    <div class="indice-cero">
+                        <div class="color-indice-1-2"></div>
+                        <div>1</div>
+                        <div>&lt;227</div>
+                    </div>
+                    <div class="indice-cero">
+                        <div class="color-indice-1-2"></div>
+                        <div>2</div>
+                        <div>&lt;318</div>
+                    </div>
+                    <div class="indice-cero">
+                        <div class="color-indice-3-4-5"></div>
+                        <div>3</div>
+                        <div>&lt;408</div>
+                    </div>
+                    <div class="indice-cero">
+                        <div class="color-indice-3-4-5"></div>
+                        <div>4</div>
+                        <div>&lt;503</div>
+                    </div>
+                    <div class="indice-cero">
+                        <div class="color-indice-3-4-5"></div>
+                        <div>5</div>
+                        <div>&lt;606</div>
+                    </div>
+                    <div class="indice-cero">
+                        <div class="color-indice-6-7"></div>
+                        <div>6</div>
+                        <div>&lt;696</div>
+                    </div>
+
+                    <div class="indice-cero">
+                        <div class="color-indice-6-7"></div>
+                        <div>7</div>
+                        <div>&lt;795</div>
+                    </div>
+
+
+                    
+                    <div class="indice-cero">
+                        <div class="color-indice-8-9-10"></div>
+                        <div>8</div>
+                        <div>&lt;881</div>
+                    </div>
+
+                    <div class="indice-cero">
+                        <div class="color-indice-8-9-10"></div>
+                        <div>9</div>
+                        <div>&lt;976</div>
+                    </div>
+
+                    <div class="indice-cero">
+                        <div class="color-indice-8-9-10"></div>
+                        <div>10</div>
+                        <div>&lt;1079</div>
+                    </div>
+
+                    <div class="indice-cero">
+                        <div class="color-indice-11"></div>
+                        <div>&gt;=11</div>
+                        <div>&lt;1170</div>
+                    </div>
+
+                </div>
+
+                <div id="contenedor-indice-pms">
+                    <h3>Escala de Calidad del Aire</h3><br>
+
+                    <div class="indice-aire">
+                        <div class="color-indice-excelente"></div>
+                        <div>Excelente</div>
+                        <div>0 - 19</div>
+                    </div>
+                    <div class="indice-aire">
+                        <div class="color-indice-buena"></div>
+                        <div>Buena</div>
+                        <div>20 - 49</div>
+                    </div>
+
+                    <div class="indice-aire">
+                        <div class="color-indice-mala"></div>
+                        <div>Mala</div>
+                        <div>50 - 99</div>
+                    </div>
+
+                    <div class="indice-aire">
+                        <div class="color-indice-poco-saludable"></div>
+                        <div>Poco saludable</div>
+                        <div>100 - 149</div>
+                    </div>
+
+                    <div class="indice-aire">
+                        <div class="color-indice-muy-poco-saludable"></div>
+                        <div>Muy poco saludable</div>
+                        <div>150 - 249</div>
+                    </div>
+
+                    <div class="indice-aire">
+                        <div class="color-indice-peligrosa"></div>
+                        <div>Peligrosa</div>
+                        <div>250+</div>
+                    </div>
+                </div>
+                
+              </div>
+
+            </div>
+        
+    
+    </main>
+    
+
+    <script>
+
+
+
+
+
+    </script>
+</body>
+</html>
+
+
+

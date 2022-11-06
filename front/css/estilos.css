@@ -1,0 +1,332 @@
+#container {
+    height: 120%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+
+#uvluz{
+    margin-top: 60px;
+}
+#ventanarectangulo{
+    text-align: center;
+    width: 80%;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 1% 1%;
+    height: 250px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    background-color: #f2f2f2;
+    flex-wrap: wrap;
+    padding: 0.5em 0.7em;
+    justify-content: center;
+}
+
+#container2{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;  /*Sirve para separar*/  
+}
+
+
+  #ventanaizquierda {
+    
+    text-align: center;
+    width: 25%;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 1% 1%;
+    height: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-family: "Montserrat", sans-serif;
+    
+    background-color: #f2f2f2;
+    flex-wrap: wrap;
+    padding: 0.5em 0.7em;
+ 
+  }
+  #ventanacentro {
+    text-align: center;
+    width: 25%;
+    font-size: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    margin: 1% 1%;
+    height: 300px;
+    font-family: "Montserrat", sans-serif;
+    
+    background-color: #f2f2f2;
+    padding: 0.5em 0.7em;
+    margin-left: 20px;
+    margin-right: 20px;;
+  }
+  
+  
+  #ventanaderecha {
+    text-align: center;
+    padding: 0.5em 0.7em;
+    border-radius: 10px;
+    width: 25%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    font-size: 20px;
+    margin: 0 auto;
+    margin: 1% 1%;
+    height: 300px;
+    font-family: "Montserrat", sans-serif;
+    
+    background-color: #f2f2f2;
+  }
+  #ventanarectangulo{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    
+ }
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    /* background-color: rgb(86, 211, 211); */
+    background-color: rgb(255 255 255);
+    padding: 100px 0px 0;
+    font-family: 'Catalina Autumn', sans-serif;
+    
+}
+
+
+.header{
+    background-color: #f2f2f2;
+    height: 90px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-box-shadow: 10px 10px 5px 0px rgb(0 0 0 / 75%);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 2px 5px 0px rgb(0 0 0 / 16%);
+}
+.nav-menu-link{
+    padding : 8px 12px;
+    border-radius: 10px;
+}
+.nav-menu-link:hover{
+    
+    background-color: rgba(174, 190, 199, 0.986);
+    transition: 0.5s;
+}
+.nav-menu-item{
+    font-size: 20px;
+    margin: 0 10px;
+    line-height: 90px;
+    text-transform: none;
+    width: max-content;
+}
+.nav-menu{
+    display: flex;
+    margin-right: 40px;
+    list-style: none;
+}
+.nav{
+    display:flex;
+    justify-content: space-between;
+    max-width: 992px;
+    margin: 0 auto;
+}
+
+.nav-link{
+    /* color:rgb(22, 24, 24); */
+    color: rgb(24, 19, 19);
+    text-decoration: none;
+}
+
+.ancho-img{
+    width: 70px;
+    display: flex;
+    margin: 0;
+    margin-right: 15px;
+    
+
+
+}
+
+#temperatura{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#humedad{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#pmdoscomacinco{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px;
+}
+
+#pmdiez{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 25px; 
+}
+
+#uvluz{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    /* margin-top: 25px;  */
+}
+
+#peticiontemperatura, #peticionhumedad, #peticionpmdospuntocinco, #peticionpmdiez, #peticionradiacionluz{
+    margin-left: 10px;
+}
+
+
+#ventanarectangulo{
+    display: inline-flex;
+    flex-direction: row;
+    overflow-y: scroll;
+
+}
+
+#contenedor-tabla-indice-uv, #contenedor-indice-pms{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    padding-bottom: 20px;
+}
+
+.indice-cero, .indice-aire{
+    display: inline-flex;
+    justify-content: space-between;
+    width: 80%;
+}
+
+.color-indice-0, .color-indice-1-2, .color-indice-3-4-5, .color-indice-6-7, .color-indice-8-9-10, .color-indice-11,
+.color-indice-excelente, .color-indice-buena, .color-indice-mala, .color-indice-poco-saludable, .color-indice-muy-poco-saludable,
+.color-indice-peligrosa{
+    width: 50px;
+    height: 25px;
+
+}
+
+.color-indice-0{
+    background-color: gray;
+}
+
+.color-indice-1-2{
+    background-color: green;
+}
+
+.color-indice-3-4-5{
+    background-color: yellow;
+}
+
+.color-indice-6-7{
+    background-color: gold;
+}
+
+.color-indice-8-9-10{
+    background-color: red;
+}
+
+.color-indice-11{
+    background-color: blueviolet;
+}
+
+
+
+
+.color-indice-excelente{
+    background-color: green;
+}
+
+.color-indice-buena{
+    background-color: gold;
+}
+
+.color-indice-mala{
+    background-color: orange;
+}
+
+.color-indice-poco-saludable{
+    background-color: red;
+}
+
+.color-indice-muy-poco-saludable{
+    background-color: blueviolet;
+}
+
+.color-indice-peligrosa{
+    background-color: rgb(255, 0, 255);
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+
+
+@media only screen and (max-width: 600px) {
+    #container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    } 
+
+    #ventanaizquierda, #ventanacentro,#ventanaderecha, #ventanarectangulo{
+        width: 90%;
+    }
+
+    #ventanarectangulo{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #contenedor-tabla-indice-uv, #contenedor-indice-pms{
+        width: 95%;
+        margin-bottom: 20px;
+    }
+
+  }
